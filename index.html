@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Нормативно-правовое обеспечение инклюзивного взаимодействия</title>
 
 <style>
@@ -16,6 +19,7 @@ body{
 font-family:"Segoe UI",Arial;
 background:#f4f7fb;
 color:#333;
+line-height:1.5;
 }
 
 /* HEADER */
@@ -30,12 +34,18 @@ align-items:center;
 position:sticky;
 top:0;
 z-index:100;
+flex-wrap:wrap;
 }
 
 .logo{
 font-weight:700;
 font-size:20px;
 color:#2c3e50;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
 }
 
 nav button{
@@ -55,13 +65,13 @@ color:#3498db;
 /* HERO */
 
 .hero{
-height:90vh;
+min-height:90vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:20px;
+padding:40px 20px;
 background:linear-gradient(120deg,#3498db,#6dd5fa);
 color:white;
 }
@@ -188,12 +198,14 @@ height:100%;
 background:rgba(0,0,0,0.6);
 justify-content:center;
 align-items:center;
+padding:20px;
 }
 
 .modal-content{
 background:white;
 padding:40px;
 max-width:650px;
+width:100%;
 border-radius:12px;
 text-align:center;
 animation:fade 0.4s;
@@ -222,6 +234,75 @@ color:white;
 text-align:center;
 padding:20px;
 margin-top:60px;
+}
+
+/* ========================= */
+/* MOBILE ADAPTATION */
+/* ========================= */
+
+@media (max-width:900px){
+
+.hero h1{
+font-size:32px;
+}
+
+.section h2{
+font-size:26px;
+}
+
+}
+
+@media (max-width:600px){
+
+header{
+padding:15px 20px;
+flex-direction:column;
+align-items:flex-start;
+gap:10px;
+}
+
+nav{
+width:100%;
+justify-content:flex-start;
+}
+
+nav button{
+margin-left:0;
+margin-right:15px;
+margin-top:5px;
+font-size:15px;
+}
+
+.hero{
+padding:60px 20px;
+}
+
+.hero h1{
+font-size:26px;
+}
+
+.hero button{
+width:100%;
+max-width:300px;
+}
+
+.category h3{
+font-size:20px;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.gallery img{
+width:100%;
+height:auto;
+}
+
+.modal-content{
+padding:25px;
+}
+
 }
 
 </style>
